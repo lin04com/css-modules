@@ -1,0 +1,36 @@
+/**
+ * @author 	Erick Song
+ * @date 	2012-02-15
+ * @email	ahschl0322@gmail.com
+ * @info    base style
+ * 这个base 文件的要求是定义一下最基础的UI，越简单越好，切记！尽量不要往这个文件里面加代码，谨慎~
+ */
+
+/* global base style - for pptv.com */
+body{ min-width:960px; color:#888; font:normal 12px/1.5 '\5b8b\4f53',arial,tahoma; background:#fff}
+.gs_960{ width:960px; margin:0 auto;}
+.re_960 .m,.re_960 .s,.mod_box,.pl_cbox{ border-radius:4px}
+.gs_960 .m,.gs_960 .s{ float:left; overflow:hidden;}
+.gs_960 .m{ width:680px}
+.gs_960 .s{ float:right; width:250px}
+.gs_960 .box{ border:1px solid #e5e5e5}
+.m .col_l{ float:left}
+.m .col_r{ float:right}
+a{color:#333;outline:none}
+a:hover{ text-decoration: none; color:#FF7300;}
+
+h1, h2, h3, h4, h5, h6{ font-weight:bold;}
+h1{font-size:20px;}
+h2{font-size:16px;}
+h3{font-size:14px;}
+h4{font-size:12px;}
+h5{font-size:12px;}
+h6{font-size:12px;}
+
+/* 广告 */
+.sp{ margin-bottom: 15px; overflow: hidden;}
+.m .sp{width:680px;}
+.s .sp{ width:250px; }
+
+
+/* mode box */

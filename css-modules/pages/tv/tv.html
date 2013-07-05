@@ -1,0 +1,714 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>电视剧频道页</title>
+<!-- 公用css文件 -->
+<link rel="stylesheet" href="../../basic/base.css" />
+<link rel="stylesheet" href="../../grid/grid-960.css" />
+<!-- 引用页面中用到的模块css文件 -->
+<link rel="stylesheet" href="../../modules/slider/module-slider.css" />
+<link rel="stylesheet" href="../../modules/index/module-index.css" />
+<link rel="stylesheet" href="../../modules/sort-picslide/module-sort-picslide.css" />
+<link rel="stylesheet" href="../../modules/pic-info/module-pic-info.css" />
+<link rel="stylesheet" href="../../modules/play-list/module-play-list.css" />
+<link rel="stylesheet" href="../../ui/ui-toptitle/ui-toptitle.css" />
+<link rel="stylesheet" href="../../modules/picshow/module-picshow.css" />
+<link rel="stylesheet" href="../../ui/ui-pics/ui-pics.css" />
+<link rel="stylesheet" href="../../ui/ui-title2/ui-title2.css" />
+<link rel="stylesheet" href="../../modules/charts/module-charts.css" />
+<link rel="stylesheet" href="../../modules/graphiclist/module-graphiclist.css" />
+
+  <style>
+/*    .plt-clt .g_miniHeader,
+    .plt-clt .g_search,
+    .plt-clt .g_sitemap,
+    .plt-clt .g_copyright{ display: block}*/
+    /*.module .mod{ background: #f90}*/ /* 调试 */
+  </style>
+
+</head>
+<!-- service在页面body上标识终端，plt-clt|plt-web|plt-sm -->
+<script type="text/javascript">
+  var plt = 'plt-web';
+  if(location.href.indexOf('plt=clt') > -1){
+    plt = 'plt-clt';
+  }
+  window.onload = function(){
+    document.body.setAttribute('class', plt);
+  }
+</script>
+
+<body>
+
+    <!-- /start 一个标准通栏模块 -->
+    <div class="grid">
+        <div class="module cf">
+            <div class="m cf">
+                <!-- /start 引用module-slider模块 -->
+                <div class="mod module-slider cf" style="height:290px;">
+                    <div class="slider-viewer">
+                        <ul class="slider-focus">
+                            <li> <a class="slider-img" href="http://v.pptv.com/show/3RhGxCySAkAsqhI.html" title="天龙八部" target="_blank"> <img src="http://img1.pplive.cn/images/2013/06/07/10343559456.jpg" data-src="http://img1.pplive.cn/images/2013/06/07/10343559456.jpg" alt="超人：钢铁之躯"> </a>
+                                <p class="slider-txt"> <a href="http://v.pptv.com/show/3RhGxCySAkAsqhI.html" title="《天龙八部》菜鸟记者陈意涵卷入网络暴动，技术男陈柏霖追查幕后黑手" target="_blank"> <strong>复仇者联盟重磅出击</strong> <span>据台湾媒体报道，马英九对菲律宾枪杀台湾渔</span> </a> <span class="slider-bg"></span>
+                                    <!-- 背景可以用i来处理 -->
+                                </p>
+                            </li>
+                            <li> <a class="slider-img" href="http://v.pptv.com/show/ibBZQzjacDEqtK5M.html" title="太极侠" target="_blank"> <img src="http://img1.pplive.cn/images/2013/06/06/09585301758.jpg" data-src2="http://img1.pplive.cn/images/2013/06/06/09585301758.jpg" alt="太极侠"> </a>
+                                <p class="txt"> <a href="http://v.pptv.com/show/ibBZQzjacDEqtK5M.html" title="基努·李维斯不当黑客练太极 饰演大反派 霸气外露" target="_blank"> <strong>基努·李维斯不当黑客练太极 饰演大反派 霸气外露</strong> <span>和中国功夫结下不解之缘 李维斯导演处子秀献中国</span> </a> <span class="slider-bg"></span> </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slider-control">
+                        <ul class="slider-thumbnail">
+                            <li> <a href="http://v.pptv.com/show/hiaIrqVMJd7UYlv4.html" target="_blank"> <img src="http://sr2.pplive.com/cms/41/53/d7d72d0041172862605371103a7366d1.jpg" alt=""> <span class="msk"><i class="arrow"></i></span> </a> </li>
+                            <li><a href="http://v.pptv.com/show/g0kJhib9VxQPsatI.html" target="_blank"><img src="http://sr2.pplive.com/cms/41/30/307ebb12e7d4c06f31278a643dc1ecaf.jpg" alt=""> <span class="msk"><i class="arrow"></i></span></a> </li>
+                            <li><a href="http://v.pptv.com/show/4ZicTUbia9I2HEQqo.html" target="_blank"><img src="http://sr2.pplive.com/cms/11/17/e81a17c67c91dd379d142f9c1810e1bd.jpg" alt=""> <span class="msk"><i class="arrow"></i></span></a> </li>
+                            <li class="slider-thumbnail-active"> <a href="http://v.pptv.com/show/2pjaWIjUSojradE.html" target="_blank"><img src="http://img1.pplive.cn/images/2012/07/05/12302476291.jpg" alt=""> <span class="msk"><i class="arrow"></i></span></a> </li>
+                            <li class="active"><a href="http://v.pptv.com/show/kCgqqAtKtPJV0zs.html" target="_blank"><img src="http://sr3.pplive.com/cms/18/40/0d99e394aaadf796ff8a25939e3f200c.jpg" alt=""> <span class="msk"><i class="arrow"></i></span></a> </li>
+                            <li><a href="http://v.pptv.com/show/Gn70ciaU0quhLyTE.html" target="_blank"><img src="http://sr3.pplive.com/cms/69/85/3f38fddfd4139cfbc5feea20408b9425.jpg" alt=""> <span class="msk"><i class="arrow"></i></span></a> </li>
+                            <li class="active"><a href="http://v.pptv.com/show/kCgqqAtKtPJV0zs.html" target="_blank"><img src="http://sr3.pplive.com/cms/18/40/0d99e394aaadf796ff8a25939e3f200c.jpg" alt=""> <span class="msk"><i class="arrow"></i></span></a> </li>
+                            <li><a href="http://v.pptv.com/show/Gn70ciaU0quhLyTE.html" target="_blank"><img src="http://sr3.pplive.com/cms/69/85/3f38fddfd4139cfbc5feea20408b9425.jpg" alt=""> <span class="msk"><i class="arrow"></i></span></a> </li>
+                            <li><a href="http://v.pptv.com/show/g0kJhib9VxQPsatI.html" target="_blank"><img src="http://sr2.pplive.com/cms/41/30/307ebb12e7d4c06f31278a643dc1ecaf.jpg" alt=""> <span class="msk"><i class="arrow"></i></span></a> </li>
+                            <li><a href="http://v.pptv.com/show/4ZicTUbia9I2HEQqo.html" target="_blank"><img src="http://sr2.pplive.com/cms/11/17/e81a17c67c91dd379d142f9c1810e1bd.jpg" alt=""> <span class="msk"><i class="arrow"></i></span></a> </li>
+                        </ul>
+                        <div class="slider-btns">
+                            <!-- 这个地方也可以使用a -->
+                            <span class="slider-btn slider-btnprev"></span> <span class="slider-btn slider-btnnext"></span> </div>
+                    </div>
+                </div>
+                <!-- /end 引用module-slider模块 -->
+            </div>
+            <div class="s cf">
+                <!-- /start 引用module-index模块 -->
+                <div class="mod module-index cf" style="height:290px">
+                    <div class="hd">
+                        <h4 class="index-title">电视剧节目索引</h4>
+                        <span class="btn-index-more"> <a href="http://list.pptv.com/sort_list/1.html" title="更多" target="_blank">更多&gt;&gt;</a> </span> </div>
+                    <div class="bd">
+                        <p class="index-type"> <strong>类型：</strong> <a href="http://list.pptv.com/sort_list/1-100.html" target="_blank" title="动作">动作</a> <a href="http://list.pptv.com/sort_list/1-101.html" target="_blank" title="爱情">爱情</a> <a href="http://list.pptv.com/sort_list/1-102.html" target="_blank" title="灾难">灾难</a> <a href="http://list.pptv.com/sort_list/1-103.html" target="_blank" title="恐怖">恐怖</a> <a href="http://list.pptv.com/sort_list/1-104.html" target="_blank" title="科幻">科幻</a> <a href="http://list.pptv.com/sort_list/1-124.html" target="_blank" title="喜剧">喜剧</a> <a href="http://list.pptv.com/sort_list/1-125.html" target="_blank" title="悬疑">悬疑</a> <a href="http://list.pptv.com/sort_list/1-126.html" target="_blank" title="魔幻">魔幻</a> <a href="http://list.pptv.com/sort_list/1-127.html" target="_blank" title="战争">战争</a> <a href="http://list.pptv.com/sort_list/1-134.html" target="_blank" title="文艺">文艺</a> </p>
+                        <p class="index-type"> <strong>地区：</strong> <a href="http://list.pptv.com/sort_list/1--5.html" target="_blank" title="大陆">大陆</a> <a href="http://list.pptv.com/sort_list/1--6.html" target="_blank" title="香港">香港</a> <a href="http://list.pptv.com/sort_list/1--12.html" target="_blank" title="韩国">韩国</a> <a href="http://list.pptv.com/sort_list/1--4.html" target="_blank" title="美国">美国</a> <a href="http://list.pptv.com/sort_list/1--10.html" target="_blank" title="英国">英国</a> <a href="http://list.pptv.com/sort_list/1--9.html" target="_blank" title="法国">法国</a> <a href="http://list.pptv.com/sort_list/1--0.html" target="_blank" title="其他">其他</a> </p>
+                        <p class="index-type"> <strong>年份：</strong> <a href="http://list.pptv.com/sort_list/1---2013------1.html" target="_blank" title="2013">2013</a> <a href="http://list.pptv.com/sort_list/1---2012.html" target="_blank" title="2012">2012</a> <a href="http://list.pptv.com/sort_list/1---2011.html" target="_blank" title="2011">2011</a> <a href="http://list.pptv.com/sort_list/1---2010.html" target="_blank" title="2010">2010</a> <a href="http://list.pptv.com/sort_list/1---2009.html" target="_blank" title="2009">2009</a> <a href="http://list.pptv.com/sort_list/1---2008.html" target="_blank" title="2008">2008</a> <a href="http://list.pptv.com/sort_list/1---2007.html" target="_blank" title="2007">2007</a> <a href="http://list.pptv.com/sort_list/1---2006.html" target="_blank" title="2006">2006</a> <a href="http://list.pptv.com/sort_list/1---2005.html" target="_blank" title="2005">2005</a> <a href="http://list.pptv.com/sort_list/1---199.html" target="_blank" title="更早">更早</a> </p>
+                        <p class="index-type"> <strong>年份：</strong> <a href="http://list.pptv.com/sort_list/1---2013------1.html" target="_blank" title="2013">2013</a> <a href="http://list.pptv.com/sort_list/1---2012.html" target="_blank" title="2012">2012</a> <a href="http://list.pptv.com/sort_list/1---2011.html" target="_blank" title="2011">2011</a> <a href="http://list.pptv.com/sort_list/1---2010.html" target="_blank" title="2010">2010</a> <a href="http://list.pptv.com/sort_list/1---2009.html" target="_blank" title="2009">2009</a> <a href="http://list.pptv.com/sort_list/1---2008.html" target="_blank" title="2008">2008</a> <a href="http://list.pptv.com/sort_list/1---2007.html" target="_blank" title="2007">2007</a> <a href="http://list.pptv.com/sort_list/1---2006.html" target="_blank" title="2006">2006</a> <a href="http://list.pptv.com/sort_list/1---2005.html" target="_blank" title="2005">2005</a> <a href="http://list.pptv.com/sort_list/1---199.html" target="_blank" title="更早">更早</a> </p>
+                    </div>
+                </div>
+                <!-- /end 引用module-index模块 -->
+            </div>
+        </div>
+    </div>
+    <!-- /end 一个标准通栏模块 -->
+    <!-- /start 一个标准通栏模块 -->
+    <div class="grid">
+        <div class="module cf">
+            <div class="m cf" >
+                <!-- /start 引用module-sort-picslide模块 -->
+                <div class="mod module-sort-picslide module-sort-picslide-hover cf" style="height:170px;">
+                    <!--module-sort-picslide-hover 鼠标放上去加的样式-->
+                    <div> <a class="btn btn_prev" title="#" href="javascript:;"></a> <a class="btn btn_next" title="#" href="javascript:;"></a> </div>
+                    <div style="position:relative; width:680px; overflow:hidden;">
+                        <ul class="pic_move cf">
+                            <li>
+                    <h2><a href="#" title="#"><img src="http://static9.pplive.cn/pub/flagment/modules/sort-picslide/pic.jpg" alt="#"/></a></h2>
+                    <p class="pic160x90"><a href="#" title="#" > <img src="http://sr3.pplive.com/cms/36/04/f4688e0e8e395ee9115ced4d9fe3b46b.jpg" alt="#"/> <span class="msk">20120909期</span> </a></p> <span class="txt txt1"><a href="#" title="#">习近平走访哥国农丽媛闻香</a></span> </li>
+                   			<li>
+                    <h2><a href="#" title="#"><img src="http://static9.pplive.cn/pub/flagment/modules/sort-picslide/pic.jpg" alt="#"/></a></h2>
+                    <p class="pic160x90"><a href="#" title="#" > <img src="http://sr3.pplive.com/cms/36/04/f4688e0e8e395ee9115ced4d9fe3b46b.jpg" alt="#"/> <span class="msk">20120909期</span> </a></p> <span class="txt txt1"><a href="#" title="#">习近平走访哥国农丽媛闻香</a></span> </li>
+                            <li>
+                    <h2><a href="#" title="#"><img src="http://static9.pplive.cn/pub/flagment/modules/sort-picslide/pic.jpg" alt="#"/></a></h2>
+                    <p class="pic160x90"><a href="#" title="#" > <img src="http://sr3.pplive.com/cms/36/04/f4688e0e8e395ee9115ced4d9fe3b46b.jpg" alt="#"/> <span class="msk">20120909期</span> </a></p> <span class="txt txt1"><a href="#" title="#">习近平走访哥国农丽媛闻香</a></span> </li>
+                            <li>
+                                <h2><a href="#" title="#"><img src="http://static9.pplive.cn/pub/flagment/modules/sort-picslide/pic.jpg" alt="#"/></a></h2>
+                                <p class="pic160x90"><a href="#" title="#" > <img src="http://sr3.pplive.com/cms/36/04/f4688e0e8e395ee9115ced4d9fe3b46b.jpg" alt="#"/> <span class="msk">20120909期</span> </a></p> <span class="txt txt1"><a href="#" title="#">习近平走访哥国农丽媛闻香</a></span> </li>
+                            <li>
+                                <h2><a href="#" title="#"><img src="http://static9.pplive.cn/pub/flagment/modules/sort-picslide/pic.jpg" alt="#"/></a></h2>
+                                <p class="pic160x90"><a href="#" title="#" > <img src="http://sr3.pplive.com/cms/36/04/f4688e0e8e395ee9115ced4d9fe3b46b.jpg" alt="#"/> <span class="msk">20120909期</span> </a></p> <span class="txt txt1"><a href="#" title="#">习近平走访哥国农丽媛闻香</a></span> </li>
+            </ul>
+                    </div>
+                </div>
+                <!-- /end 引用module-sort-picslide模块 -->
+            </div>
+            <div class="s cf" >
+                <!-- /start 引用module-pic-info模块 -->
+                <div class="mod module-pic-info cf" style="height:170px;">
+                    <div class="hd">
+                        <div class="ui-title">
+                            <h3 class="fl">即将播出</h3>
+                        </div>
+                    </div>
+                    <div class="bd">
+                        <div class="pic-info">
+                            <div class="pic-100x75 fl"> <a href="#" title="#" target="_blank"><img src="http://sr4.pplive.com/cms/19/54/c966790ecf36eeeb79a44b5d24ca2ce1.jpg" alt="#"/></a> <span class="txt"><a href="#" title="#" target="_blank">万凰之王最新预告</a></span> </div>
+                            <div class="info">
+                                <h4><a href="#" title="#" target="_blank">万凰之王</a></h4>
+                                <em class="color_y">即将上线</em>
+                                <p>看点：黑暗悬疑生存系漫画《未来日记》改编动改编动改编</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /end 引用module-pic-info模块 -->
+            </div>
+        </div>
+    </div>
+    <!-- /end 一个标准通栏模块 -->
+    <!-- /start 一个标准通栏模块 -->
+    <div class="grid">
+        <div class="module cf">
+            <div class="m cf">
+                <!-- /start 引用module-picshow模块 -->
+                <div class="mod module-picshow cf" style="height:340px;">
+                    <div class="hd">
+                        <div class="ui-title2">
+                            <h2><a href="#" title="#">热播电视剧</a></h2>
+                            <!--<span class="more"><a href="#" title="更多">更多>></a></span>-->
+                            <ul class="ui-tv-sorts">
+                                <li class="now"><a href="javascript:;" title="同步更新">同步更新</a></li>
+                                <li><a href="javascript:;" title="强档热播">强档热播啊</a></li>
+                                <li><a href="javascript:;" title="同步更新">同步更新</a></li>
+                                <li><a href="javascript:;" title="强档热播">强档热播</a></li>
+                                <li><a href="javascript:;" title="同步更新">同步更新</a></li>
+                                <li><a href="javascript:;" title="强档热播">强档热播</a></li>
+                                <li><a href="javascript:;" title="同步更新">同步更新</a></li>
+                            </ul>
+                        </div>
+                        <!-- //btn_more 更多，adlogo预留广告需求
+                    <span class="btn_more">
+                        <a href="http://sports.pptv.com/" title="更多" target="_blank">更多&gt;&gt;</a>
+                    </span>
+                    <div class="adlogo"></div>
+                    -->
+                    </div>
+                    <div class="bd">
+                        <!-- {{module-body - [#include ui-120x160 ui-160x90]}} -->
+                        <div class="ui-pics ui-160x90">
+                            <ul class="cf">
+                                <li> <em class="cover ico_1 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_2 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_3 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_4 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_1 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_2 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_3 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_4 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_5 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_6 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_7 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_8 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /end 引用module-picshow模块 -->
+            </div>
+            <div class="s cf" >
+                <!-- /start 引用module-charts模块 -->
+                <div class="mod module-play-list cf" style="height:340px;">
+        <div class="hd">
+            <div class="ui-title">
+                <h3 class="fl">电影热播榜</h3>
+                <div class="fr tabnow-ico">
+                    <ul class="fl">
+                        <li class="now">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                    <span class="fl l-arrow-ico"></span> <span class="fl r-arrow-ico"></span> </div>
+            </div>
+        </div>
+        <div class="bd">
+            <div class="play-list">
+                <ul class="cf">
+                    <li>
+                        <h5><a href="#" title="#" target="_blank">万凰之王(至34集)</a></h5>
+                        <p><span><i class="play-n"></i><a href="javascript:;" title="#" target="_blank" class="display-no">直播结束</a></span><em>12:45 湖南卫视</em></p>
+                    </li>
+                    <li>
+                        <h5><a href="#" title="#" target="_blank">万凰之王(至34集)</a></h5>
+                        <p><span><i class="play-y"></i><a href="#" title="#" target="_blank" >正在播出</a></span><em>12:45 湖南卫视</em></p>
+                    </li>
+                    <li>
+                        <h5><a href="#" title="#" target="_blank">万凰之王(至34集)</a></h5>
+                        <p><span><i class="play-y"></i><a href="#" title="#" target="_blank">预约提醒</a></span><em>12:45 湖南卫视</em></p><!--play-y黄色按钮 play-n 灰色按钮 display-no没有连接不可点-->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+                <!-- /end 引用module-charts模块 -->
+            </div>
+        </div>
+    </div>
+    <!-- /end 一个标准通栏模块 -->
+    <div class="grid">
+        <div>
+             <div height="90" id="afp_226005" style="display:block" class="sp"><a target="_blank" href="http://jp.as.pptv.com/webcollect/click?pos=226005&amp;tid=TA201112061105350160&amp;chid=&amp;lid=001&amp;uuid=137215101731254351290&amp;ln=http%3A%2F%2Fkorea.pptv.com%2Fzt%2FSY%2F"><img width="980" height="90" alt="" src="http://asimgs.pplive.cn/imgs/materials/2013/6/6/20130606100908_moren130606hanyutonglan1980.jpg"></a></div>
+
+        </div>
+    </div>
+    <!-- /start 一个标准通栏模块 -->
+    <!-- /end 一个标准通栏模块 -->
+    <!-- /start 一个标准通栏模块 -->
+    <div class="grid">
+        <div class="module cf">
+            <div class="m cf">
+                <!-- /start 引用module-picshow模块 -->
+                <div class="mod module-picshow cf" style="height:470px;">
+                    <div class="hd">
+                        <div class="ui-title2">
+                            <h2><a href="#" title="#">小编推荐</a></h2>
+                            <!--<span class="more"><a href="#" title="更多">更多>></a></span>-->
+                            <ul class="ui-tv-sorts">
+                                <li class="now"><a href="javascript:;" title="同步更新">同步更新</a></li>
+                                <li><a href="javascript:;" title="强档热播">强档热播啊</a></li>
+                                <li><a href="javascript:;" title="同步更新">同步更新</a></li>
+                                <li><a href="javascript:;" title="强档热播">强档热播</a></li>
+                                <li><a href="javascript:;" title="同步更新">同步更新</a></li>
+                                <li><a href="javascript:;" title="强档热播">强档热播</a></li>
+                                <li><a href="javascript:;" title="同步更新">同步更新</a></li>
+                            </ul>
+                        </div>
+                        <!-- //btn_more 更多，adlogo预留广告需求
+                    <span class="btn_more">
+                        <a href="http://sports.pptv.com/" title="更多" target="_blank">更多&gt;&gt;</a>
+                    </span>
+                    <div class="adlogo"></div>
+                    -->
+                    </div>
+                    <div class="bd">
+                        <!-- {{module-body - [#include ui-120x160 ui-160x90]}} -->
+                        <div class="ui-pics ui-120x160">
+                            <ul class="cf">
+                                <li> <em class="cover ico_1 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_2 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_3 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_4 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_1 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_2 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_3 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_4 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_5 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_6 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_7 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_8 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /end 引用module-picshow模块 -->
+            </div>
+            <div class="s cf" >
+                <!-- /start 引用module-charts模块 -->
+                <div class="mod module-charts" style="height:470px;">
+                    <div class="hd">
+                        <div class="ui-title">
+                            <h3 class="fl">电视剧热播榜</h3>
+                            <span class="more"><a href="#" title="更多">更多>></a></span> </div>
+                    </div>
+                    <div class="bd">
+                        <div class="pic-90x120">
+                            <dl>
+                                <dt><a href="#" target="#"><img src="http://img1.pplive.cn/images/2013/06/05/09415292461.jpg"></a><i></i></dt>
+                                <dd><span class="title"><a href="#" title="#">星际迷航 </a></span><em class="num">8.1</em><span class="renew">( 更新至55集 )</span><span class="role"><strong>主演：</strong><a href="#" title="#">仲里依纱</a> <a href="#" title="#">仲里依纱</a></span></dd>
+                            </dl>
+                        </div>
+                        <div class="con-list">
+                            <ul>
+                                <li><i class="now">02</i><span class="renew"><a href="#" title="#">热浪球爱战</a>（更新至55集）</span><span class="num">8.1</span></li>
+                                <li><i class="now">03</i><span class="renew"><a href="#" title="#">热浪球爱战</a>（更新至55集）</span><span class="num">8.1</span></li>
+                                <li><i>04</i><span class="renew"><a href="#" title="#">热浪球爱战</a>（更新至55集）</span><span class="num">8.1</span></li>
+                                <li><i>05</i><span class="renew"><a href="#" title="#">热浪球爱战</a>（更新至55集）</span><span class="num">8.1</span></li>
+                                <li><i>06</i><span class="renew"><a href="#" title="#">热浪球爱战</a>（更新至55集）</span><span class="num">8.1</span></li>
+                                <li><i>07</i><span class="renew"><a href="#" title="#">热浪球爱战</a>（更新至55集）</span><span class="num">8.1</span></li>
+                                <li><i>08</i><span class="renew"><a href="#" title="#">热浪球爱战</a>（更新至55集）</span><span class="num">8.1</span></li>
+                                <li><i>09</i><span class="renew"><a href="#" title="#">热浪球爱战</a>（更新至55集）</span><span class="num">8.1</span></li>
+                                <li><i>10</i><span class="renew"><a href="#" title="#">热浪球爱战</a>（更新至55集）</span><span class="num">8.1</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /end 引用module-charts模块 -->
+            </div>
+        </div>
+    </div>
+    <!-- /end 一个标准通栏模块 -->
+    <!-- /start 一个标准通栏模块 -->
+    <div class="grid">
+        <div class="module cf" >
+            <div class="m cf" >
+                <!-- /start 引用module-picshow模块 -->
+                <div class="mod module-picshow cf" style="height:260px; ">
+                    <div class="hd">
+                        <div class="ui-title2">
+                            <h2><a href="#" title="#">大陆电视剧</a></h2>
+                                 <ul class="ui-hottxt">
+                                     <li><a href="#" title="火影忍者">火影忍者</a></li>
+                                     <li><a href="#" title="#">蜡笔小新</a></li>
+                                     <li><a href="#" title="#">蜡笔小新</a></li>
+                                     <li><a href="#" title="#">蜡笔小新</a></li>
+                                     <li><a href="#" title="#">蜡笔小新</a></li>
+                                 </ul>
+                        </div>
+                    </div>
+                    <div class="bd">
+                        <!-- {{module-body - [#include ui-120x160 ui-160x90]}} -->
+                        <div class="ui-pics ui-120x160">
+                            <ul class="cf">
+                                <li> <em class="cover ico_5 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_6 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_7 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_8 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /end 引用module-picshow模块 --
+                    <!-- /start 引用module-picshow模块 -->
+                <div class="mod module-picshow cf" style="height:260px; ">
+                    <div class="hd">
+                        <div class="ui-title2">
+                            <h2><a href="#" title="#">日韩电视剧</a></h2>
+                        </div>
+                    </div>
+                    <div class="bd">
+                        <!-- {{module-body - [#include ui-120x160 ui-160x90]}} -->
+                        <div class="ui-pics ui-120x160">
+                            <ul class="cf">
+                                <li> <em class="cover ico_4 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_5 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_6 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_7 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_8 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /end 引用module-picshow模块 -->
+            </div>
+            <div class="s cf" >
+                <!-- /start 引用module-graphiclist模块 -->
+                <div class="mod module-graphiclist" style="height:530px">
+                    <div class="hd">
+                        <div class="ui-title">
+                            <h3 class="fl">特别推荐</h3>
+                            <span class="more" ><a href="#" title="更多">更多>></a></span> </div>
+                    </div>
+                    <div class="bd">
+                        <div class="pic-230x90">
+                            <dl>
+                                <dt><a href="#" target="#"><img src="http://img1.pplive.cn/images/2013/06/06/15014044714.jpg"></a></dt>
+                                <dd class="fl"><a href="#" title="#">叨光鉴影07期：让我们一起毁童年</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="#" target="#"><img src="http://img1.pplive.cn/images/2013/06/06/15014044714.jpg"></a></dt>
+                                <dd class="fl"><a href="#" title="#">叨光鉴影07期：让我们一起毁童年</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="#" target="#"><img src="http://img1.pplive.cn/images/2013/06/06/15014044714.jpg"></a></dt>
+                                <dd class="fl"><a href="#" title="#">叨光鉴影07期：让我们一起毁童年</a></dd>
+                            </dl>
+                        </div>
+                        <div class="con-list fl">
+                            <ul>
+                                <li><i class="ico fl"></i><a href="#" title="#">绿茶婊——男人爱女人恨</a></li>
+                                <li><i class="ico fl"></i><a href="#" title="#">成为大侠必备的武林秘籍</a></li>
+                                <li><i class="ico fl"></i><a href="#" title="#">周末影院</a></li>
+                                <li><i class="ico fl"></i><a href="#" title="#">周末影院</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /end 引用module-graphiclist模块 -->
+            </div>
+        </div>
+    </div>
+    <!-- /end 一个标准通栏模块 -->
+    <!-- /start 一个标准通栏模块 -->
+    <div class="grid">
+        <div class="module cf" >
+            <div class="m cf" >
+                <!-- /start 引用module-picshow模块 -->
+                <div class="mod module-picshow cf" style="height:260px; ">
+                    <div class="hd">
+                        <div class="ui-title2">
+                            <h2><a href="#" title="#">港台电视剧</a></h2>
+                        </div>
+                    </div>
+                    <div class="bd">
+                        <!-- {{module-body - [#include ui-120x160 ui-160x90]}} -->
+                        <div class="ui-pics ui-120x160">
+                            <ul class="cf">
+                                <li> <em class="cover ico_1 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_2 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_3 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_4 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_5 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_6 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_7 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_8 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /end 引用module-picshow模块 --
+                    <!-- /start 引用module-picshow模块 -->
+                <div class="mod module-picshow cf" style=" height:260px;">
+                    <div class="hd">
+                        <div class="ui-title2">
+                            <h2><a href="#" title="#">海外电视剧</a></h2>
+                        </div>
+                    </div>
+                    <div class="bd">
+                        <!-- {{module-body - [#include ui-120x160 ui-160x90]}} -->
+                        <div class="ui-pics ui-120x160">
+                            <ul class="cf">
+                                <li> <em class="cover ico_1 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_2 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_3 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_4 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_5 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_6 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_7 cf"></em>
+                                    <p class="ui-pic"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr2.pplive.com/cms/19/17/e56360753432428be327ed69c5d4c087.jpg" data-src2="http://s2.pplive.cn/v/cov/16152801/v120.jpg"> <span class="msk">更新至33集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="柳岩遭屌丝" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">柳岩遭屌丝</a>
+                                    <p>哈利波特死亡圣器</p>
+                                    </span> </li>
+                                <li> <em class="cover ico_8 cf"></em>
+                                    <p class="ui-pic"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html"> <img src="http://sr1.pplive.com/cms/95/23/c8bbadd5eb496d64724edf3890b9f701.jpg" data-src2="http://s2.pplive.cn/v/cov/11684497/v120.jpg"> <span class="msk">更新至18集</span> </a> </p>
+                                    <span class="ui-txt"> <a title="至诚感天" href="http://v.pptv.com/show/gHHwbtY8rOpNyzM.html">至诚感天</a>
+                                    <p>变形金刚完结篇</p>
+                                    </span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /end 引用module-picshow模块 -->
+            </div>
+            <div class="s cf" >
+                <!-- /start 引用module-graphiclist模块 -->
+                <div class="mod module-graphiclist" style="height:530px; ">
+                    <div class="hd">
+                        <div class="ui-title">
+                            <h3 class="fl">专题策划</h3>
+                            <span class="more" ><a href="#" title="更多">更多>></a></span> </div>
+                    </div>
+                    <div class="bd">
+                        <div class="pic-230x90">
+                            <dl>
+                                <dt><a href="#" target="#"><img src="http://img1.pplive.cn/images/2013/06/06/15014044714.jpg"></a></dt>
+                                <dd class="fl"><a href="#" title="#">叨光鉴影07期：让我们一起毁童年</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="#" target="#"><img src="http://img1.pplive.cn/images/2013/06/06/15014044714.jpg"></a></dt>
+                                <dd class="fl"><a href="#" title="#">叨光鉴影07期：让我们一起毁童年</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="#" target="#"><img src="http://img1.pplive.cn/images/2013/06/06/15014044714.jpg"></a></dt>
+                                <dd class="fl"><a href="#" title="#">叨光鉴影07期：让我们一起毁童年</a></dd>
+                            </dl>
+                        </div>
+                        <div class="con-list fl">
+                            <ul>
+                                <li><i class="ico fl"></i><a href="#" title="#">绿茶婊——男人爱女人恨</a></li>
+                                <li><i class="ico fl"></i><a href="#" title="#">成为大侠必备的武林秘籍</a></li>
+                                <li><i class="ico fl"></i><a href="#" title="#">周末影院</a></li>
+                                <li><i class="ico fl"></i><a href="#" title="#">周末影院</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /end 引用module-graphiclist模块 -->
+            </div>
+        </div>
+    </div>
+    <!-- /end 一个标准通栏模块 -->
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+/**
+ * @author 	Erick Song
+ * @date 	2013-06-08
+ * @email	ahschl0322@gmail.com
+ * @info 	索引模块
+ */
+
+.module-index{padding:0 10px;overflow:hidden}
+.module-index .hd{position:relative; height:30px; margin:10px 0; background:url(http://static9.pplive.cn/pub/flagment/v_20130702182953/basic/images/bg-tabs.jpg) repeat-x left bottom}
+.module-index .hd h4{width:84px; height:20px; overflow:hidden}
+.module-index .index-title{color:#999;}
+.module-index .btn-index-more{ position:absolute;top:0;right:5px;width:40px; height:20px; overflow:hidden;color:#f1f1f1;}
+
+.module-index .bd{line-height:20px;}
+.module-index .index-type{margin-bottom:10px;overflow:hidden;}
+	.index-type strong{display:block;width:100%;margin-bottom:4px;font-weight:bold;}
+.module-index .index-w50 a{float:left; width:36px;height:20px; margin-right:10px; overflow:hidden}
+.module-index .index-w83 a{float:left; width:71px;height:20px; margin-right:1px; overflow:hidden}
+	
+	
+/* plt-web */
+
+.plt-web .module-index .hd{margin:10px 0 0 0;background:none;}
+.plt-web .module-index{border:1px #dedfe2 solid}
+.plt-web .index-type strong,.plt-web .module-index .index-title{color:#444}
+.plt-web .module-index .index-w50 a{margin-right:7px;}

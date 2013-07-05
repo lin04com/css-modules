@@ -1,0 +1,77 @@
+/**
+ * @author 	Erick Song
+ * @date 	2011-12-24
+ * @email	ahschl0322@gmail.com
+ * @info    global css rest
+ *
+ */
+
+/* global reset - based on yui3 */
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;border:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display: block}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ul,ol,li{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;font-size:100%}
+legend{color:#000}
+
+/* custorm reset */
+body{font:normal 12px/1.5 \5b8b\4f53,arial,tahoma}
+/* h1,h2,h3,h4{ font-family:5FAE8F6F96C59ED1,Simsun,arial,5b8b4f53;} */
+strong,b{ font-weight:bold}
+textarea, input {resize:none; outline:none}
+a{text-decoration:none}
+a:hover{text-decoration:underline}
+
+.fl{float:left} .fr{float:right} .nbg{background:none !important}
+.cf:before,.cf:after {content:""; display:table}
+.cf:after {clear:both}
+.cf {zoom:1}
+
+/*for old code*/
+.c_b{zoom:1}
+.c_b:after{clear:both;content:" "; display:block}
+.t_l{text-align:left}
+.t_c{text-align:center}
+.t_r{text-align:right}
+
+
+/**
+ * 以下文件是将base.css合并进来
+ * 这个文件的要求是定义一下最基础的UI，越简单越好，切记！尽量不要往这个文件里面加代码，谨慎~
+*/
+ /* global base style - for pptv.com */
+body{ min-width:960px; color:#888; font:normal 12px/1.5 '\5b8b\4f53',arial,tahoma; background:#fff}
+.gs_960{ width:960px; margin:0 auto;}
+.re_960 .m,.re_960 .s,.mod_box,.pl_cbox{ border-radius:4px}
+.gs_960 .m,.gs_960 .s{ float:left; overflow:hidden;}
+.gs_960 .m{ width:680px}
+.gs_960 .s{ float:right; width:250px}
+.gs_960 .box{ border:1px solid #e5e5e5}
+.m .col_l{ float:left}
+.m .col_r{ float:right}
+a{color:#333;outline:none}
+a:hover{ text-decoration: none; color:#FF7300;}
+
+h1, h2, h3, h4, h5, h6{ font-weight:bold;}
+h1{font-size:20px;}
+h2{font-size:16px;}
+h3{font-size:14px;}
+h4{font-size:12px;}
+h5{font-size:12px;}
+h6{font-size:12px;}
+
+/* 广告 */
+.sp{ margin-bottom: 15px; overflow: hidden;}
+.m .sp{width:680px;}
+.s .sp{ width:250px; }
+
+
+/* mode box */

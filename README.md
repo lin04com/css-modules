@@ -2,7 +2,7 @@
 
 ##【目录结构】
  \static9\pub\flagment:
- 
+
     ---
      |---- basic/               不同的base.css文件提供选择(模块的基础，所有样式均基于它)
      |---- grid/                模块外层框架，栅格系统，样式统一使用 grid 表示样式名
@@ -12,9 +12,9 @@
      |---- READEME.txt
 
 ##【模块目的】
-* 将页面以块为单位划分为不同模块，每个模块单独写样式，一个模块一个css文件；
-  编辑在后台可以选择模块自行搭建页面，模块本身可以有简单配置项(比如文字行数控制，皮肤等)；
-  公司统一规范，节约成本；
+ - 将页面以块为单位划分为不同'模块'，每个模块单独写样式，一个模块一个css文件；
+ - 编辑在后台可以选择模块自行搭建页面，模块本身可以有简单配置项(比如文字行数控制，皮肤等)；
+ - 公司统一规范，节约成本；
 
 
 ##【模块规则】
@@ -28,8 +28,8 @@
 * 8) 每做好一个css模块后，必须有想对应的预览图以及对应的html代码
 * 9) css 模块作者，注释和后续模块修改记录都可以在css文件中加注释，文件合并的时候会忽略这些
 * 10) 每个模块开发的时候，尽量要到自适应，不限制高宽 - 高度可以通过后台简单配置，宽度可以通过外层框架控制
-    ```html
     例如：
+    ```
     /**
      * @author 	Erick Song
      * @date 	2013-03-02
@@ -38,19 +38,19 @@
      */
     ```
 * 11) 写模块的时候尽量不要指定某些特定标签来写样式，最好使用class来控制，这样后续更换成其他标签也可以
-    ```例如：
+    例如：
     一个按钮可以用 button, span, a等
-    ```
+
 11) 页面拼装模块的时候，每个模块上加一个唯一class命名，如module-skin-*【适应编辑需求，页面覆写】
 
 
 ##【前缀占用】
-* 1) 终端识别 plt-*           <限制在body中使用，后端输出>
-* 2) 栅格系统 grid-*
-* 3) 模块标识 module-*
-* 4) 组件标识 ui-*
-* 5) 按钮标识 btn-*
-* 6) 全局标识 g-* 或 g_*      <g_ 为原有头尾模块>
+ - 1) 终端识别 plt-*           <限制在body中使用，后端输出>
+ - 2) 栅格系统 grid-*
+ - 3) 模块标识 module-*
+ - 4) 组件标识 ui-*
+ - 5) 按钮标识 btn-*
+ - 6) 全局标识 g-* 或 g_*      <g_ 为原有头尾模块>
 
 
 ##【模块命名规则】
@@ -61,20 +61,20 @@
 
 ##【模块限制性命名】
 * 1) 栅格系统以及模块框架中定义的class，页面级不要轻易使用，比如:
-    栅格：      grid
-    模块：      module以及hd, bd, ft
+ -  栅格：      grid
+ -  模块：      module以及hd, bd, ft
 
 * 2) 终端判断标识class - plt-*
-    网站：      plt-web
-    客户端：    plt-clt
-    多终端：    plt-sm
-    (待补充)...
+ -  网站：      plt-web
+ -  客户端：    plt-clt
+ -  多终端：    plt-sm
+ -  (待补充)...
 
 
 ##【模块对应模块名】
-* module-test     测试demo
-  module-slider   标准slider，全站通用
-  module-picshow  带有标题及tab的通用图片展示模块
+- module-test     测试demo
+- module-slider   标准slider，全站通用
+- module-picshow  带有标题及tab的通用图片展示模块
 
 
 ##【模块写法约定与建议】
@@ -102,30 +102,30 @@
     ```
 * 3) ...
 
-```
-/**
- * 页面是以模块为单位，但是模块继承或限定于栅格-grid系统使用
- * ==========================================================
- * 简单的模块设计: <这个地方有点纠结，是否需要module这个层级，或者说是不是可以和grid合并到一起？>
- * 模块本身有一个mod通用class，这个全局控制，然后紧跟一个模块本身样式 如module-slider，在加一个可配置class cf - 清除浮动
- * <div class="grid">
- *  <div class="module">
- *      <div class="m cf">
- *          <!-- 每个模块本身通过style写高度，这个高度严格参考产品文档或设计稿 -->
- *          {{#include module 碎片}}</div>
- *      <div class="s cf">{{#include module 碎片}}</div>
- *  </div>
- * </div>
- *
- * 广告模块设计：<默认所有广告模块初始化没有高度，广告加载完成后出现高度>
- * <div class="grid">
- *  <div class="sp sp_200116"></div>
- * </div>
- */
-```
+    ```
+    /**
+     * 页面是以模块为单位，但是模块继承或限定于栅格-grid系统使用
+     * ==========================================================
+     * 简单的模块设计: <这个地方有点纠结，是否需要module这个层级，或者说是不是可以和grid合并到一起？>
+     * 模块本身有一个mod通用class，这个全局控制，然后紧跟一个模块本身样式 如module-slider，在加一个可配置class cf - 清除浮动
+     * <div class="grid">
+     *  <div class="module">
+     *      <div class="m cf">
+     *          <!-- 每个模块本身通过style写高度，这个高度严格参考产品文档或设计稿 -->
+     *          {{#include module 碎片}}</div>
+     *      <div class="s cf">{{#include module 碎片}}</div>
+     *  </div>
+     * </div>
+     *
+     * 广告模块设计：<默认所有广告模块初始化没有高度，广告加载完成后出现高度>
+     * <div class="grid">
+     *  <div class="sp sp_200116"></div>
+     * </div>
+     */
+    ```
 
 ##【标准模块 module-*】
-* 一个标准模块由三个部分组成(简单模块可以选择忽略hd, bd, ft 但是必须有外层module)：
+ 一个标准模块由三个部分组成(简单模块可以选择忽略hd, bd, ft 但是必须有外层module)：
     ```html
     <div class="module-A module-A-hover">
         <div class="hd">
@@ -139,7 +139,6 @@
         </div>
     </div>
     ```
-
 
     ```
     html
@@ -157,15 +156,15 @@
 
 
 ##【模块组件 ui-*】
-```html
-<div class="ui-box ui-box-hover">
-    <div class="ui-box-head">
-        <div class="ui-box-head-border">
-            <h3 class="ui-box-head-title">区块标题</h3>
+    ```html
+    <div class="ui-box ui-box-hover">
+        <div class="ui-box-head">
+            <div class="ui-box-head-border">
+                <h3 class="ui-box-head-title">区块标题</h3>
+            </div>
         </div>
+        <div class="ui-box-container"></div>
     </div>
-    <div class="ui-box-container"></div>
-</div>
 ```
 
 
@@ -174,10 +173,10 @@
 
 * 合并发布建议：
     //文件合并可以参考下面这样，方便调试 - page-play.min.css
-    (页面解析动态模块依赖 http://static9.pplive.cn/pub/styles/ + 'module path')
-    @import 'module-a.css';
-    @import 'module-b.css';
-    @import 'module-c.css';
+   - (页面解析动态模块依赖 http://static9.pplive.cn/pub/styles/ + 'module path')
+   - @import 'module-a.css';
+   - @import 'module-b.css';
+   - @import 'module-c.css';
 
 * //page.css
     .test{
@@ -186,7 +185,6 @@
     }
 
 
-
 ## 草稿：
-*［reset + base(基于pplive-ui) + moudles + page css(模块差异化)］
+* ［reset + base(基于pplive-ui) + moudles + page css(模块差异化)］
 * base + modules + 页面inline css

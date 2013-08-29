@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PPTV首页</title>
+<!-- 公用css文件 -->
+<link rel="stylesheet" href="../../basic/base.css" />
+<link rel="stylesheet" href="../../grid/grid-960.css" />
+<!-- 引用页面中用到的模块css文件 -->
+<link rel="stylesheet" href="../../modules/slider/module-slider.css" />
+
+  <style>
+/*    .plt-clt .g_miniHeader,
+    .plt-clt .g_search,
+    .plt-clt .g_sitemap,
+    .plt-clt .g_copyright{ display: block}*/
+    /*.module .mod{ background: #f90}*/ /* 调试 */
+  </style>
+
+</head>
+<!-- service在页面body上标识终端，plt-clt|plt-web|plt-sm -->
+<script type="text/javascript">
+  // var plt = 'plt-web';
+  // if(location.href.indexOf('plt=clt') > -1){
+  //   plt = 'plt-clt';
+  // }
+  // window.onload = function(){
+  //   document.body.setAttribute('class', plt);
+  // }
+</script>
+
+<body>
+
+    <!--
+        大首页：
+        modify: 新增1140分辨率样式(grid-1140 - 在body上控制)
+                新增通栏模块样式(wp-grid) <div class="wp-grid"><div class="module-metro">xxx</div>
+
+            960被隐藏的那一列可以加默认样式，hide-960，也可以通过外层样式控制
+    -->
+
+    <script type="text/javascript">
+        //按分辨率控制样式显示 grid-1140
+        (function(a){function e(c,a){clearTimeout(c.tId);c.tId=setTimeout(function(){c.call(a)},200)}var f=a.body.className,b=function(){var c=c=a.documentElement?a.documentElement.clientWidth:a.body.clientWidth,b=a.body,d=b.className;1360>c?b.setAttribute("class",f):(newClass=-1<d.indexOf("grid-1140")?d:d+" grid-1140",b.setAttribute("class",newClass))};window.addEventListener?window.addEventListener("resize",function(){e(b)}):window.attachEvent&&window.attachEvent("onresize",function(){e(b)});b()})(document);
+    </script>
+
+    <!-- /start 首页metro模块 -->
+    <div class="wp-grid">
+        <div class="module-metro">
+            <div class="m">
+                xxx
+            </div>
+            <div class="s"></div>
+        </div>
+    </div>
+    <!-- /end 首页metro模块 -->
+
+    <!-- /start 一个标准通栏模块 -->
+    <div class="grid">
+        <div class="module cf">
+            <div class="m cf">
+                <!-- /start 引用module-slider模块 -->
+
+                <!-- /end 引用module-slider模块 -->
+            </div>
+            <div class="s cf">
+                <!-- /start 引用module-index模块 -->
+
+                <!-- /end 引用module-index模块 -->
+            </div>
+        </div>
+    </div>
+    <!-- /end 一个标准通栏模块 -->
+
+</body>
+</html>

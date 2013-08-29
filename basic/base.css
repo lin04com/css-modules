@@ -91,7 +91,7 @@ h6{font-size:12px;}
  */
 .module{ position: relative;}
 .module .m, .module .s{ height: 100%; /*padding-bottom: 32767px; margin-bottom: -32767px;*/}
-.module .mod{ margin-top: 10px}
+.grid .mod{ margin-top: 10px}
 .module-h170{ height: 170px}
 .module-h250{ height: 250px}
 .module-h260{ height: 260px}
@@ -103,6 +103,11 @@ h6{font-size:12px;}
 .module-h530{ height: 530px}
 .module-h590{ height: 590px}
 
+
+/**
+ * 960隐藏右边那一列
+ */
+ .grid .hide-960{ display: none}
 
 /**
  * 以上为css reset文件，下面是css module设计的一部分
@@ -133,15 +138,15 @@ h6{font-size:12px;}
 /*.plt-web .module{ margin:5px;}*/
 .plt-web .module .mod{ margin-top: 10px}
 .plt-web .grid .s{ width:240px}
-.plt-web .sp{ height:90px; margin:10px 0 0 0;}
+.plt-web .sp{ height:90px;}
 .plt-web a{ color:#444;}
 .plt-web a:hover{ color:#f0842b;}
 
 .plt-clt{ padding-bottom:10px; background: #2b2b2b; color:#999;}
 /*.plt-clt .m, .plt-clt .s{ background: #414141}*/
-.plt-clt .module .mod{ background: #414141}
+.plt-clt .module .mod{background:#414141}
 .plt-clt .module .sp{margin-top:10px;}
-.plt-clt .sp{ height: 60px; margin:5px 0 -5px 0;}
+.plt-clt .sp{ height: 60px;}
 .plt-clt a{ color:#fff;}
 .plt-clt a:hover{ color:#00b4ff;}
 .plt-clt .w{ background:#3a3a3a}

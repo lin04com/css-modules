@@ -136,9 +136,9 @@ h6{font-size:12px;}
  */
 .plt-web{ background: #fff; color:#888;}
 /*.plt-web .module{ margin:5px;}*/
-.plt-web .module .mod{ margin-top: 10px}
+.plt-web .module .mod{ margin-top: 10px; background: #fff}
 .plt-web .grid .s{ width:240px}
-.plt-web .sp{ height:90px;}
+.plt-web .sp{height:90px;}
 .plt-web a{ color:#444;}
 .plt-web a:hover{ color:#f0842b;}
 

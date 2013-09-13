@@ -39,6 +39,13 @@
 .grid-1140 .grid .m{ width:880px}
 .grid-1140 .grid .s{ width:240px}
 
+/**
+ * wp-main - 这一层设计是为了处理页面背景广告而做的，包含整个body内容
+ * 主体部分添加白色背景，避免背景广告投放难看
+*/
+.wp-main{ background: url('http://static9.pplive.cn/pub/flagment/basic/images/sp-960.jpg') 50% 0 repeat-y;}
+.grid-1140 .wp-main{background: url('http://static9.pplive.cn/pub/flagment/basic/images/sp-1140.jpg') 50% 0 repeat-y;}
+
 
 /**
  * 广告模块 - 默认所有的广告模块后加载

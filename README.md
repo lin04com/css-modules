@@ -192,3 +192,10 @@
 ## 草稿：
 * ［reset + base(基于pplive-ui) + moudles + page css(模块差异化)］
 * base + modules + 页面inline css
+
+* 页面层级关系：
+    导航 - 9000以上
+    页面正常 - 1000以下
+    广告 - 2000 - 3000之间
+* 需要讨论的问题：
+    模块命名方式

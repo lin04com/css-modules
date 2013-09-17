@@ -8,6 +8,13 @@
  * 客户端： 960 = 700 + 250 + 10
  */
 
+/**
+ * 框架中所用到的全局设置(body上)：
+ * plt-* 					-> 终端识别
+ * grid  					-> 框架本身标识
+ * grid-1140 			-> 1140宽度
+ * grid-response  -> 相应式设计
+ */
 
 /**
  * 针对通栏背景的处理
@@ -19,6 +26,7 @@
  * </div>
  */
  .wp-grid{ width:100%}
+
 
 /**
  * 页面外层框架本身用grid表示引用了栅格系统，
@@ -36,7 +44,7 @@
 
 /* 首页改版，适应960、1140尺寸，分界点为 1360 */
 .grid-1140 .grid{ width:1140px}
-.grid-1140 .grid .m{ width:880px}
+.grid-1140 .grid .m, .grid-1140 .grid .m .sp{ width:880px}
 .grid-1140 .grid .s{ width:240px}
 
 /**
@@ -52,6 +60,27 @@
  * 需求：要求广告模块的上下边距为5px
  */
 .grid .sp{ display: none; margin-top:10px; overflow: hidden;}
-.m .sp{width:700px;}
-.s .sp{ width:250px; }
+/*.m .sp{width:700px;}
+.s .sp{ width:250px; }*/
 
+/**
+ * 广告兼容 - 自适应尺寸
+ * 要求 - 所有广告素材都以大的尺寸来做，主体内容为窄屏宽度，两边填充背景
+ * 如：960 - （1140-960）/2 两边填充90px背景融合
+ * grid-ad-c1 表示通栏广告
+*/
+
+/* 广告兼容 */
+.grid-response .grid .grid-ad-c1{ width:960px;}
+.grid-1140 .grid .grid-ad-c1{ width: 1140px}
+.grid-response .grid-ad-c1{ position: relative; overflow: hidden;}
+
+/* 窄屏 - 960px */
+.grid-response .grid .m .sp, /* 左边广告 */
+.grid-response .grid .grid-ad-c1 .sp{ margin-left:-90px} /* 通栏广告 */
+.grid .m .sp iframe{ margin-left:90px} /* 确保iframe 广告左边显示*/
+.grid-1140 .grid .m .sp iframe{ margin-left: 0}
+
+/* 宽屏 - 1140px */
+.grid-1140 .grid .m .sp,
+.grid-1140 .grid .grid-ad-c1 .sp{ margin-left:0}

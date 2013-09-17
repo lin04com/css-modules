@@ -1,4 +1,5 @@
 # Css Moudle Test(version - 0.0.1)
+====================================
 
 ##【目录结构】
  \static9\pub\flagment:
@@ -48,8 +49,14 @@
     hide-960 - 960隐藏列
 
 
+## 【模块编写注意点】
+1. 模块命名 - 文件名就是模块名，如：module-pagelist，module-slider
+2. 模块本身样式(如：module-slider)本身不定义与其他模块间距(尤其是上下边距 - margin/padding - top/bottom)，保证模块本身设置高度不会变化
+3. 模块要有mod，然后是模块class，后面最好加上cf - 清除浮动，如<div class="mod module-slider cf"></div>
+4. 模块上下边距通过内部结构控制，如.module-slider .hd{ padding-top:10px}
+
 ##【前缀占用】
- - 1) 终端识别 plt-*           <限制在body中使用，后端输出>
+ - 1) 终端识别 plt-*           <限制在body中使用，后端输出 - web|plt|sm>
  - 2) 栅格系统 grid-*
  - 3) 模块标识 module-*
  - 4) 组件标识 ui-*
@@ -170,8 +177,39 @@
         <div class="ui-box-container"></div>
     </div>
     ```
+    
+##【广告模块规范】
+1. 广告模块结构：
+   广告模块粒子(ad-seed)：
+   ``` html
+   <div class="mod sp" id="afp_xxx"></div>
+   ```
 
+   通栏 - 左右广告：
+   ``` html
+    <div class="grid">
+        <div class="module cf">
+            <div class="m cf">
+                <div class="mod sp" id="afp_xxx"></div>
+            </div>
+            <div class="s cf">
+                <div class="mod sp" id="afp_xxx"></div>
+            </div>
+        </div>
+    </div>
+    ```
 
+   通栏广告：
+   ``` html
+   <div class="grid">
+       <div class="grid-ad-c1">
+           <div class="mod sp" id="afp_xxx"></div>
+       </div>
+   </div>
+   ```
+
+2. 要求：用一个广告素材自适应宽窄屏切换
+3. 方案：所有广告素材都以大的尺寸来做，主体内容为窄屏宽度，两边填充背景 如：960 - （1140-960）/2 两边填充90px背景融合
 ##【合并与发布】
 * 页面搭建完毕后，发布前会完成页面模块解析，分析页面所需模块，动态合并css文件；
 
